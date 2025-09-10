@@ -223,10 +223,21 @@ body {
   padding: 1rem;
   border-radius: 6px;
   border-left: 3px solid #00d8ff;
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   transition: all 0.3s ease;
 }
 
+.ach-item a {
+  color: #00d8ff;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.ach-item a:hover {
+  text-decoration: underline;
+}
 .ach-item:hover {
   transform: translateX(5px);
   border-left-color: #00ff8c;
@@ -913,5 +924,31 @@ footer {
   .contact-section form {
     padding: 1.5rem;
     width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .cert-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .cert-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .cert-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cert-btn {
+    align-self: flex-start;
+    width: 100%;
+    text-align: center;
   }
 }
